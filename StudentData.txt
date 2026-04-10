@@ -1,5 +1,5 @@
 import sqlite3
-conn = sqlite3.connect(':memory:')
+conn = sqlite3.connect('Students.db')
 cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOINCREN, name TEXT, course TEXT)")
 def add_student(name, course):
