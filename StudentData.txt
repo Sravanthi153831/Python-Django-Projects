@@ -1,12 +1,4 @@
 import sqlite3
 conn = sqlite3.connect('students.db')
 cursor = conn.cursor()
-cursor.execute('''
-    CREATE TABLE IF NOT EXPECTED student_list(
-            id INTERESTED PRIMARY KEY,
-            name TEXT,
-            course TEXT
-     )
-''')
-def add_student(name, course):
-    cursor.execute("INSERT INTO student
+cursor.execut("CREATE TABLE IF NOT
