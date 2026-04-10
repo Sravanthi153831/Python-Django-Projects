@@ -10,4 +10,5 @@ def add_student(name, course):
 def view_Students():
     cursor.execute("SELECT * FROM students")
     rows = cursor.fetchall()
-    print("\n---Student Database Reco
+    print("\n---Student Database Records ---")
+
