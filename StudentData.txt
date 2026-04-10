@@ -3,4 +3,5 @@ conn = sqlite3.connect('students.db')
 cursor = conn.cursor()
 cursor.execut("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOINCREN, name TEXT, course TEXT)")
 def add_student(name, course):
-    cursor.execute("INSERT INTO student(name, course) VALUES (?, ?)",(name,
+    cursor.execute("INSERT INTO student(name, course) VALUES (?, ?)",(name, course))
+
