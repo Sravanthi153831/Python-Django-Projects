@@ -5,5 +5,6 @@ cursor.execut("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOIN
 def add_student(name, course):
     cursor.execute("INSERT INTO student(name, course) VALUES (?, ?)",(name, course))
     conn.commit()
-    print(f"Success: {name} added to Dat
+    print(f"Success: {name} added to Database")
+
 
