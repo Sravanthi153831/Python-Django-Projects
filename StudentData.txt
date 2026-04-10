@@ -12,4 +12,4 @@ def view_Students():
     rows = cursor.fetchall()
     print("\n---Student Database Records ---")
     for row in rows:
-        print(f"ID: {row[0]} | Name: 
+        print(f"ID: {row[0]} | Name:
