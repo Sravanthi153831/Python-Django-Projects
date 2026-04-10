@@ -1,7 +1,7 @@
 import sqlite3
 conn = sqlite3.connect(':memory:')
 cursor = conn.cursor()
-cursor.execut("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOINCREN, name TEXT, course TEXT)")
+cursor.execute("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOINCREN, name TEXT, course TEXT)")
 def add_student(name, course):
     cursor.execute("INSERT INTO student(name, course) VALUES (?, ?)",(name, course))
     conn.commit()
@@ -14,5 +14,5 @@ def view_Students():
     for row in rows:
         print(f"ID: {row[0]} | Name: {row[1]} | Course: {row[2]}")
 add_student("Sravanthi", "Python Backend")
-view_stundents()
+view_studentsr()
 conn.close()
