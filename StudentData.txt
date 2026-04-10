@@ -9,4 +9,4 @@ cursor.execute('''
      )
 ''')
 def add_student(name, course):
-    cu
+    cursor.execute("INSERT INTO student
