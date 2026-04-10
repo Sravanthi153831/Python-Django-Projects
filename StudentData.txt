@@ -8,4 +8,5 @@ def add_student(name, course):
     print(f"Success: {name} added to Database")
 
 def view_Students():
-    cursor.execute("SELECT * FROM student 
+    cursor.execute("SELECT * FROM students")
+
