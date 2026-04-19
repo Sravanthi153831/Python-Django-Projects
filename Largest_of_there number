@@ -6,6 +6,6 @@ if a > b and a > c:
 elif b > c:
    print("Laregest number =", b)
 else:
-   print("Laregest number =", c) 
+   print("Laregest number =", c)
   
        
