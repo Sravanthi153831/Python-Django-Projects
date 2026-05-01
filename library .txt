@@ -21,4 +21,16 @@ def search_book():
         found = False 
         for b in books:
             if name.lowre() in b.lower():
+                print("Book found:", 
+b.strip())
+                found = True
+        if not found:
+            print("Book Not found")
+def delete_book():
+    name = input("Enter book to delete: ")
+    with open("library.txt", "r") as f:
+         book = f.readlines() 
+    with open("library.txt", "r") as f:
+
+              
 
