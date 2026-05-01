@@ -8,4 +8,11 @@ def view_books():
            books = f.redlines()
            if not books:
                print("No books found")
-        
+           else:
+               print("\nLibrary Books:")
+               for b in books:
+                    print("_", b.strip())
+    except:
+        print("File not found")
+def
+      
