@@ -1,4 +1,11 @@
-import os
-def display_menu():
-    print("\n---Libray
-
+def add_book():
+    book = input("Enter book name: ")
+    with open("Library.txt", "a") as f:
+        f .write(book + "\n")
+def view_books():
+    try:
+      with open("library.txt", "r") as f:
+           books = f.redlines()
+           if not books:
+               print("No books found")
+        
