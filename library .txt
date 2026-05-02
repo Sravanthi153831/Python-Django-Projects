@@ -50,8 +50,15 @@ while True:
       elif choice == "2":
          view_books()
       elif choice == "3":
-         delete_book()
+         search_book()
       elif choice == "4":
+         delete_book()
+      elif choice == "5":
+          print("Thank you!")
+          break 
+
+        
+          
          
  
               
