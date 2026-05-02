@@ -37,9 +37,9 @@ def delete_book():
                f.write(b)
            else:
                found = True
-     if found: 
+    if found: 
          print("Book deleted")
-     else:
+    elif:
          print("Book not found")
 while True:
      print("\n1.Add 2.View 3.Search 4.Delete 5.Exit")
