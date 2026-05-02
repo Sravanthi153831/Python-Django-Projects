@@ -30,7 +30,7 @@ def delete_book():
     name = input("Enter book to delete: ")
     with open("library.txt", "r") as f:
          book = f.readlines() 
-    with open("library.txt", "r") as f:
+    with open("library.txt", "w") as f:
         found = False  
         for b in books:
            if name.lower() not in b.lower():
