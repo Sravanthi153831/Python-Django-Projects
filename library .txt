@@ -42,7 +42,10 @@ b.lower():
          print("Book deleted")
      else:
          print("Book not found")
-while True 
+while True:
+     print("\n1.Add 2.View 3.Search 4.Delete 5.Exit")
+     choice = input("Enter choice: ")
+
 
               
 
