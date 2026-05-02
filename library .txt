@@ -33,8 +33,7 @@ def delete_book():
     with open("library.txt", "r") as f:
         found = False  
         for b in books:
-           if name.lower() not in 
-b.lower():
+           if name.lower() not in b.lower():
                f.write(b)
            else:
                found = True
