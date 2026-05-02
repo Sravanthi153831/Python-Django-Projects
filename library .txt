@@ -32,8 +32,8 @@ def delete_book():
          book = f.readlines() 
     with open("library.txt", "r") as f:
         found = False  
-        for b in books
-           if name.lower() Not in
+        for b in books:
+           if name.lower() not in 
 b.lower():
                f.write(b)
            else:
