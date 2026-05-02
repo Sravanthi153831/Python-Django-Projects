@@ -39,6 +39,10 @@ b.lower():
            else:
                found = True
      if found: 
-                
+         print("Book deleted")
+     else:
+         print("Book not found")
+while True 
+
               
 
