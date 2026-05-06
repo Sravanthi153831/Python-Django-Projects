@@ -8,7 +8,7 @@ password)
 password)
   special = any(c in "!@#$%^&*" for c in
 password)
-  score = sum([length, upper, lower, digit, sepecial])
+  score = sum([length, upper, lower, digit, special])
   if score == 5:
       print("Strong Password 💪")
   elif score >= 3:
