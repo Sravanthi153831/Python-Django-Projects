@@ -1,2 +1,2 @@
 "Python program to check password strength
-using conditions"
+using conditions(length, uppercase,digits,special, characters)"
