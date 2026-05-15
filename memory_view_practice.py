@@ -5,6 +5,6 @@ data2 = bytearyview(b"Python")
 mv2 = memoryview(data2)
 print("ASCII valaue of 'P' (bytearray):", mv2[0])
 mv2[0] = 74
-print("Modified string:", data2.decode
+print("Modified string:", data2.decode())
       
       
