@@ -1,2 +1,2 @@
-"Python program to check password strength
-using conditions(length, uppercase,digits,special, characters)"
+#Python & Django Projects
+This Repository contains
