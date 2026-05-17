@@ -5,4 +5,4 @@ for i in range(1, total + 1):
     if total % i == 0:
         print(f"{total} is divisible by {i}")
 else:
-    print("Loop completed! Final Total 
+    print("Loop completed! Final Total is {total}")
