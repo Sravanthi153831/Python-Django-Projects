@@ -1,5 +1,5 @@
 # 🚀 My Python & Django Development Portfolio
-Welcome to my repository!I am an aspiring**Python & Django Software Developer **passionate about Building clean, funtional wed applications.
+Welcome to my repository!I am an aspiring **Python & Django Software Developer **passionate about Building clean, funtional wed applications.
 ##📂 Repository Structure
 * **📂 01-Python-Basics**: contains core Python experiences,control flow logic, and advanced concepts 'memoryview()'.
 * **📂02-Python-Projects**:Logical applications including an ATM Project, Library Management system project,and a Password strength checker.
