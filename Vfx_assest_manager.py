@@ -16,5 +16,14 @@ class VFXAssest:
      "Asset_TYP$E": self.assef_taye,
      "Status": self.status
  ass. VFXPeliline Manager:
-  """Class to handle JSOn
+  """Class to handle JSON read/write 
+  def _init_(self, filename="Vfx_pipeline_data.json"):
+      self.filename = filename
+      self.assets = []
+      self.load_data()
+ def add "asset(self , asset):
+     Adds a new asset):
+       self.
+  
+  
   
