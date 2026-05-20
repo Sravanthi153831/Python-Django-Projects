@@ -6,4 +6,6 @@ class VFXAssest:
   def_init_(self, asset_id, asset_id, asset_name, asset_type, status="In Progress"):
      self.asset_id = asset_id
      self.asset_name = asset_name
+     self.asset_type = asset_type
+def
 
