@@ -15,5 +15,6 @@ class VFXAssest:
      "Asset_name": self.asset_name,
      "Asset_TYP$E": self.assef_taye,
      "Status": self.status
- ass. V
+ ass. VFXPeliline Manager:
+  """Class to handle JSOn
   
