@@ -28,7 +28,8 @@ class VFXAssest:
 def save_data(self):
     """Writes current asset data to a JSON file"""
     with open(self.filename, 'w') as file"""
-        Json data = [asset.to_dict() for asset in self.asset in self.assets]
-        
-  
+        json data = [asset.to_dict() for asset in self.asset in self.assets]
+        json.dump(json_data,file,
+def load_data(self):
+         """prints out the current tracked
   
