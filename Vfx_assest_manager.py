@@ -25,8 +25,11 @@ class VFXAssest:
      """Adds a new asset to the tracking system"""
        self.assets.append(asset)
        self.save_data()
-       print(f"✔️ Asset '{assets.asset_name}' successfully added to pipeline.")
-       
-  
+       print(f"✔️ Asset '{assets.asset_name}' successfully added to pipeline.") 
+def save_data(self):
+    """Writes current asset data to a JSON file"""
+    with open(self.filename, 'w') as file"""
+        Json data = [asset.to_dict() for asset in self.asset in self.assets]
+        
   
   
