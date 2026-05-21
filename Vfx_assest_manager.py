@@ -1,6 +1,6 @@
-3
+
 import json
-imprt os
+import os
 class VFXAssest:
   """Class to represent a single VFX Asset (OOP Concept)"""
   def _init_(self, asset_id, asset_id, asset_name, asset_type, status="In Progress"):
@@ -21,9 +21,11 @@ class VFXAssest:
       self.filename = filename
       self.assets = []
       self.load_data()
- def add "asset(self , asset):
-     """Adds a new asset to the 
-       self.
+ def add_asset(self , asset):
+     """Adds a new asset to the tracking system"""
+       self.assets.append(asset)
+       self.save_data()
+       print(f"✔️ Asset '{assets.asset_
   
   
   
