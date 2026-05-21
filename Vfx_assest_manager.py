@@ -25,7 +25,8 @@ class VFXAssest:
      """Adds a new asset to the tracking system"""
        self.assets.append(asset)
        self.save_data()
-       print(f"✔️ Asset '{assets.asset_
+       print(f"✔️ Asset '{assets.asset_name}' successfully added to pipeline.")
+       
   
   
   
