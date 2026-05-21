@@ -32,4 +32,4 @@ def save_data(self):
         json.dump(json_data,file,
 def load_data(self):
          """Reads and loads asset data from a JSON file"""
-  
+         if so.path.exists
