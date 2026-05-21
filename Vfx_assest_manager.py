@@ -31,5 +31,5 @@ def save_data(self):
         json data = [asset.to_dict() for asset in self.asset in self.assets]
         json.dump(json_data,file,
 def load_data(self):
-         """prints out the current tracked
+         """Reads and loads asset data from a JSON file"""
   
