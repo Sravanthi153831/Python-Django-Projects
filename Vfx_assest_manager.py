@@ -22,7 +22,7 @@ class VFXAssest:
       self.assets = []
       self.load_data()
  def add "asset(self , asset):
-     Adds a new asset):
+     """Adds a new asset to the 
        self.
   
   
