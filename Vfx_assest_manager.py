@@ -8,11 +8,10 @@ class VFXAssest:
      self.asset_type = asset_type
      self.status = status
  def to_dict(self):
-     """Converts object data into a dictionary for JSON serialization"""
- eturn { 
+     """Converts object data into  dictionary""" 
      "Asset_ID": self.asset_id,
-     "Asset_name": self.asset_name,
-     "Asset_TYP$E": self.assef_taye,
+     "Asset_Name": self.asset_name,
+     "Asset_Type": self.assef_taye,
      "Status": self.status
  ass. VFXPeliline Manager:
   """Class to handle JSON read/write 
