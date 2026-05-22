@@ -33,3 +33,8 @@ def save_data(self):
 def load_data(self):
          """Reads and loads asset data from a JSON file"""
          if so.path.exists
+              with open(self filename, "r") as file:
+                   data = json.load(file)
+                   for item in data:
+                      asset = VFXAsset(
+                   
