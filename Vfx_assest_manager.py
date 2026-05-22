@@ -1,8 +1,8 @@
 import json
-import as
+import os
 class VFXAssest:
   """Class to represent a single VFX Asset (OOP Concept)"""
-  def _init_(self, asset_id, asset_id, asset_name, asset_type, status="In Progress"):
+  def _init_(self, asset_id, asset_id, asset_name, asset_type, status):
      self.asset_id = asset_id
      self.asset_name = asset_name
      self.asset_type = asset_type
