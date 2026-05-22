@@ -7,7 +7,7 @@ class VFXAssest:
      self.asset_name = asset_name
      self.asset_type = asset_type
      self.status = status
- def to_dict(self):lize
+ def to_dict(self):
      """Converts object data into a dictionary for JSON serialization"""
  eturn { 
      "Asset_ID": self.asset_id,
