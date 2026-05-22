@@ -42,5 +42,17 @@ def load_data(self):
                           item["Asset_Type"],
                           item["Status "]
                       )
+self.assets.append(asset)
+manager = VFXPipelineManager()
+asset1 = VXFAsset(
+     "Dragon_Model"
+     "3D Model]",
+     "Completed"
+)
+manager_add_asset(asset1)
+
+
+    
+    
                       
                           
