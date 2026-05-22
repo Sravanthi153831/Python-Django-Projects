@@ -37,4 +37,10 @@ def load_data(self):
                    data = json.load(file)
                    for item in data:
                       asset = VFXAsset(
-                   
+                          item["Asset_ID"],
+                          item["Asset_Name"],
+                          item["Asset_Type"],
+                          item["Status "]
+                      )
+                      
+                          
