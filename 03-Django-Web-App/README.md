@@ -12,3 +12,6 @@ A simple Django beginner project created using Python and Django framework.
 • Django 
 • GitHub 
 🎯 Purpose
+This project was created for Django practice and GitHub learning.
+🧑‍💻 Developer 
+Sravanthi 
