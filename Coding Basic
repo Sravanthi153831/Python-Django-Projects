@@ -1,0 +1,6 @@
+move_name = "Bahubali"
+move_ret = 100
+move_time = 5.00
+print(move_name)
+print(move_ret)
+print(move_time)
