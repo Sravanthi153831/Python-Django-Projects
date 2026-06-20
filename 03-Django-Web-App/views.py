@@ -1,3 +1,3 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 def index(request):
-	return HttpResponse("Polls working")
+	  return render(request, 'polls/index.html')
