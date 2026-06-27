@@ -19,7 +19,9 @@ Project Structure
  • Screenshot/
 Screenshots 
 Project output Screenshots are available in the 
-Screenshots folder🌸
+Screenshots folder 
+
+Thank you for visiting this project.🌸
           
  
 
