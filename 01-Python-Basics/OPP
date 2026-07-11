@@ -1,0 +1,8 @@
+class Car:
+    self.brand = brand
+    self.model = model
+def show(Self):
+    print("Brand:", Self.brand)
+    print("model:", Self.model)
+c1 = Car("Toyota", "Innova")
+c1.show()
