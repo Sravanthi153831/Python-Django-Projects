@@ -17,5 +17,18 @@ Flask-REST-API/
 |__README.md
 |__requirements.txt
 |__Screenshots/
+## Simple Response 
+{
+  "message": "Task added to project 
+database!",
+  "status": "success"
+}
+## Future Improvement 
+- update Task API
+- Delete Task API
+- user Authentication
+- Development
+## Author 
+Sravanthi 
 
 
