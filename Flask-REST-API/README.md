@@ -27,7 +27,7 @@ database!",
 - update Task API
 - Delete Task API
 - user Authentication
-- Development
+- Deployment 
 ## Author 
 Sravanthi 
 
