@@ -7,13 +7,13 @@ Welcome to my repository!I am an aspiring **Python & Django Software Developer *
   
 ## 🛠️ Technologies & Tools I use
 
-### Programming language
+### Programming languages
 - Python3
   
-### Fremaworks
+### Frameworks
 - Django
 - Flask
-- Flask-REST-API
+- REST API (Flask)
   
 ### Frontend 
 - HTML
@@ -23,7 +23,7 @@ Welcome to my repository!I am an aspiring **Python & Django Software Developer *
 - SQLite
 - SQL
   
-### Version control 
+### Version Control 
 - Git
 - GitHub
   
@@ -32,7 +32,7 @@ Welcome to my repository!I am an aspiring **Python & Django Software Developer *
 - Pydroid3
   
 ---
-*💡 'Driven by problem -solving and continuoas language. I believe with enough passion,great Software can be built from anywhere,using any tools available!**
+*💡 'Driven by problem -solving and continuoas language. I believe with enough passion,great software can be built from anywhere,using any tools available!**
 
   
 
