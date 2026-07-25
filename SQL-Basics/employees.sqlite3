@@ -1,0 +1,28 @@
+CREATE TABLE employees (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    salary INTEGER
+);
+
+INSERT INTO employees VALUES (101, 'Sravanthi', 50000);
+INSERT INTO employees VALUES (102, 'Ravi', 45000);
+INSERT INTO employees VALUES (103, 'Priya', 60000);
+
+SELECT * FROM employees;
+
+SELECT * FROM employees
+WHERE salary = 50000;
+
+SELECT * FROM employees
+WHERE salary > 50000;
+
+SELECT name FROM employees;
+
+UPDATE employees
+SET salary = 55000
+WHERE id = 101;
+
+DELETE FROM employees
+WHERE id = 102;
+
+SELECT * FROM employees;
