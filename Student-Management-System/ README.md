@@ -8,15 +8,18 @@ Features
  • Update Student Information 
  • Delete Student Records
  • Django Admin Panel
+ 
 ## Technology Used 
  • Python 
  • Django 
  • SQLite
+ 
 ## Project Structure 
  • manage.py 
  • myproject/
  • Students/
  • Screenshot/
+ 
 ## Screenshots 
 Project output Screenshots are available in the 
 Screenshots folder 
