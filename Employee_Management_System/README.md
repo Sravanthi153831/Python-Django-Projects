@@ -28,7 +28,7 @@
 - 📄 README.md
  
 📂 Python
-- 📄 employee_management_System.py
+- 📄 employee_management_system.py
   
 📂 API_Test/
 - 📷 GET.png
