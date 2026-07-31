@@ -27,7 +27,8 @@
 - 📄 requirements.txt-
 - 📄 README.md
  
-📂 Python/ 📄  employee__managent_system.py
+📂 Python
+- 📄 employee_management_System.py
   
 📂 API_Test/
 - 📷 GET.png
