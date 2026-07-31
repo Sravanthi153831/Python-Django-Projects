@@ -21,16 +21,13 @@
 
 ## Project Structure
 
-'''text
-
-Employee__Management__System/
-|__ app.py
-|__ employees.db
-|__ requirements.txt
-|__ README.md
-|__ Python/
-|    |___
-|
+Employee__Management__System/__ app.py
+- __ employees.db
+- __ requirements.txt-
+- __ README.md
+- __ Python/
+-    |___
+-
 employee__managent_system.py
 |__API_Test/
 |   |__ GET.png
