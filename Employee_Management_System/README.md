@@ -14,10 +14,10 @@
 - SQLite Databas
 
 ## API Endpoints 
-GET /employees 
-POST /employees 
-PUT /employees/<id>
-DELETE /employees/<id>
+- GET /employees 
+- POST /employees 
+- PUT /employees/<id>
+- DELETE /employees/<id>
 
 ## Project Structure
 
