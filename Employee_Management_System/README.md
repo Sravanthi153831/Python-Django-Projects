@@ -21,18 +21,18 @@
 
 ## Project Structure
 
-Employee__Management__System/__ app.py
-- __ employees.db
-- __ requirements.txt-
-- __ README.md
-- __ Python/
--    |___
--
-employee__managent_system.py
-|__API_Test/
-|   |__ GET.png
-|   |__ POST.png
-|   |__ PUT.png
-|   |__ DELETE.png
+📂 Employee__Management__System/
+- 📄
+- 📄 employees.db
+- 📄 requirements.txt-
+- 📄 README.md
+ 
+📂 Python/ 📄  employee__managent_system.py
+  
+📂 API_Test/
+- 📷 GET.png
+- 📷 POST.png
+- 📷 PUT.png
+- 📷 DELETE.png
 
-'''
+
