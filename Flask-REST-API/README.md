@@ -8,16 +8,16 @@ This is a simple Flask REST API Project developed using  Python and SQLite.The A
 • JSON response 
 • REST API using Flask
 ## 🛠️ Technologies Used 
-• Python 
-• Flask 
-• SQLite
-• JSON
+- Python 
+- Flask 
+- SQLite
+- JSON
 ## 📂 Project Structure 
 Flask-REST-API/
-|__app.py
-|__README.md
-|__requirements.txt
-|__Screenshots/
+- 📄 app.py
+- 📄 README.md
+- 📄 requirements.txt
+- 📷 Screenshots/
 ## Simple Response 
 {
   "message": "Task added to project 
