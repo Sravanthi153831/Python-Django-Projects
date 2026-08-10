@@ -19,7 +19,7 @@ A REST API for registering robot items successfully.
 - REST API
 
 ## 📌 API Response
-
+**HTTP Status Code:** `201 Created` 
 Example successful response:
 
 ```json
