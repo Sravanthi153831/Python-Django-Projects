@@ -13,8 +13,7 @@ A REST API for registering robot items successfully.
 ## 🛠️ Technologies Used
 
 - Python
-- Django
-- Django REST Framework
+- Flask
 - SQLite
 - REST API
 
