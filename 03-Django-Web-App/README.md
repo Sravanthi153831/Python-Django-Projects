@@ -8,7 +8,8 @@ A simple Django beginner project created using Python and Django framework.
 
 # 📸 Screenshots
 - web output screenshot uploaded
-- Server running screenshot uploaded 
+- Server running screenshot uploade
+  
 🛠️ Technologies Used
 - Python 
 - Django 
