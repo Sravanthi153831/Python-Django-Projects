@@ -1,39 +1,41 @@
-# Employee Management System 
-## Technologies Used 
-- Python 
-- SQLite
+# Employee Management System
+
+A simple Employee Management System built using Python, Flask, SQLite, and Flask REST API.
+
+## Technologies Used
+
+- Python
 - Flask
-- Flask-REST-API 
+- SQLite
+- Flask REST API
 
 ## Features
-- View Employees(GET)
-- Add Employee (POST)
-- Update Employee(PUT)
-- Delete Employee(DELETE)
-- Search Employee 
-- SQLite Databas
 
-## API Endpoints 
-- GET /employees 
-- POST /employees 
-- PUT /employees/<id>
-- DELETE /employees/<id>
+- View all employees
+- Add a new employee
+- Update employee details
+- Delete an employee
+- Search employees
+- Store employee data using SQLite
+- RESTful API operations
 
-## Project Structure
+## API Endpoints
 
-📂 Employee__Management__System/
-- 📄 app.py
-- 📄 employees.db
-- 📄 requirements.txt-
-- 📄 README.md
- 
-📂 Python
-- 📄 employee_management_system.py
-  
-📂 API_Test/
-- 📷 GET.png
-- 📷 POST.png
-- 📷 PUT.png
-- 📷 DELETE.png
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/employees` | Get all employees |
+| POST | `/employees` | Add a new employee |
+| PUT | `/employees/<id>` | Update an employee |
+| DELETE | `/employees/<id>` | Delete an employee |
+
+## Example Employee Data
+
+```json
+{
+    "id": 106,
+    "name": "Kiran",
+    "department": "Software",
+    "salary": 70000
+}
 
 
