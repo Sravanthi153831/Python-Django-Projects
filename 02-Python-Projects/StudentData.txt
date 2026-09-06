@@ -1,18 +1,44 @@
 import sqlite3
-conn = sqlite3.connect('Students.db')
+
+# Connect to database
+conn = sqlite3.connect("Students.db")
 cursor = conn.cursor()
-cursor.execute("CREATE TABLE IF NOT EXISTS students(id INTEGER PRAMARY KEY AUTOINCREN, name TEXT, course TEXT)")
+
+# Create table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS students(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    course TEXT
+)
+""")
+
+# Add student
 def add_student(name, course):
-    cursor.execute("INSERT INTO student(name, course) VALUES (?, ?)",(name, course))
+    cursor.execute(
+        "INSERT INTO students(name, course) VALUES (?, ?)",
+        (name, course)
+    )
     conn.commit()
     print(f"Success: {name} added to Database")
 
-def view_Students():
+
+# View students
+def view_students():
     cursor.execute("SELECT * FROM students")
     rows = cursor.fetchall()
-    print("\n---Student Database Records ---")
+
+    print("\n--- Student Database Records ---")
+
     for row in rows:
         print(f"ID: {row[0]} | Name: {row[1]} | Course: {row[2]}")
+
+
+# Add student
 add_student("Sravanthi", "Python Backend")
-view_studentsr()
+
+# View students
+view_students()
+
+# Close database
 conn.close()
