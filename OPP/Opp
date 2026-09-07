@@ -1,0 +1,9 @@
+class Bank:
+    def deposit(self):
+        print("Deposit")
+
+class Customer(Bank):
+    pass
+
+c = Customer()
+c.deposit()
