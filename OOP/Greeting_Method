@@ -1,0 +1,13 @@
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello", self.name)
+        print("Welcome to Python")
+
+
+student1 = Student("Sravanthi")
+
+student1.greet()
