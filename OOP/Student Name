@@ -1,0 +1,12 @@
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def show_name(self):
+        print("Student Name:", self.name)
+
+
+student1 = Student("Sravanthi")
+
+student1.show_name()
