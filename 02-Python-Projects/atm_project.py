@@ -16,7 +16,7 @@ if input_pin == pin:
    else:
      print("Insufficient Funds!")
 else:
-  print("worng PIN! Try again.")
+  print("wrong PIN! Try again.")
 
     
     
