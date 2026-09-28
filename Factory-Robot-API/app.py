@@ -39,10 +39,10 @@ def get_factory_items():
     items = []
     for row in rows:
         items.append({
-            "item_id": row,
-            "item_name": row,
-            "robot_assigned": row,
-            "status": row
+            "item_id": row,[0],
+            "item_name": row,[1],
+            "robot_assigned": row,[2],
+            "status": row[3]
         })
     return jsonify(items), 200
 
