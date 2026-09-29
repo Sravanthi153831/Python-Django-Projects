@@ -1,0 +1,19 @@
+### 🗄️ SQL Multi-Table JOIN Query Output
+
+I successfully attached external databases and executed an advanced multiple `INNER JOIN` query filtering by category on a Mobile Terminal.
+
+**SQL Query:**
+```sql
+SELECT customers.name, prod.products.name
+FROM customers
+JOIN orders ON customers.customer_id = orders.customer_id
+JOIN prod.products ON orders.product_id = prod.products.id
+WHERE prod.products.category = 'Electronics';
+```
+
+**Terminal Output:**
+```text
+Ravi|Laptop
+Sita|Phone
+Ravi|Headphones
+```
