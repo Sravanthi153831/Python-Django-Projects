@@ -1,0 +1,6 @@
+numbers = [10, 15, 20, 25, 30]
+total = 0
+for num in numbers:
+	if num % 2 == 0:
+		total = total + num
+print("The sum of even numbers is:", total)
