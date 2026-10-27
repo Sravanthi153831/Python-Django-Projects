@@ -1,0 +1,70 @@
+import sqlite3
+
+# 1. Database Connection and Table Initialization
+connection = sqlite3.connect("ecommerce_platform.db")
+cursor = connection.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS orders (
+    order_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    product_name TEXT NOT NULL,
+    customer_name TEXT NOT NULL,
+    price REAL NOT NULL,
+    delivery_status TEXT NOT NULL
+)
+""")
+connection.commit()
+
+# 2. Python Object-Oriented Programming (OOP) Architecture
+class ECommerceOrder:
+    def __init__(self, product_name, customer_name, price, delivery_status="Processing"):
+        self.product_name = product_name
+        self.customer_name = customer_name
+        self.price = price
+        self.delivery_status = delivery_status
+
+    def create_order(self):
+        # Database query to INSERT a new online order
+        cursor.execute(
+            "INSERT INTO orders (product_name, customer_name, price, delivery_status) VALUES (?, ?, ?, ?)",
+            (self.product_name, self.customer_name, self.price, self.delivery_status)
+        )
+        connection.commit()
+        print(f"[SUCCESS] Order placed for '{self.product_name}' by {self.customer_name}")
+
+    @staticmethod
+    def update_delivery_status(order_id, new_status):
+        # Advanced SQL UPDATE query to modify live shipping status
+        cursor.execute(
+            "UPDATE orders SET delivery_status = ? WHERE order_id = ?",
+            (new_status, order_id)
+        )
+        connection.commit()
+        print(f"[SHIPPING UPDATE] Order ID {order_id} status updated to: {new_status}")
+
+    @staticmethod
+    def view_active_orders():
+        # SQL SELECT query to fetch and display clean production log
+        cursor.execute("SELECT * FROM orders")
+        rows = cursor.fetchall()
+        print("\n================ LIVE ORDER TRACKING LOG ================")
+        for row in rows:
+            print(f"Order ID: {row[0]} | Product: {row[1]} | Customer: {row[2]} | Price: ${row[3]} | Status: {row[4]}")
+        print("=========================================================\n")
+
+# 3. Executing the Production Architecture
+# Placing a fresh premium order as a Lead Developer!
+order1 = ECommerceOrder("High-End Developer Laptop", "Sravanthi Mujiganti", 1499.99)
+order1.create_order()
+
+print("\n--- Current Order Database State ---")
+ECommerceOrder.view_active_orders()
+
+# Simulating live tracking update (Assuming Order ID is 1, moving from Processing to Shipped)
+ECommerceOrder.update_delivery_status(1, "Shipped for Delivery")
+
+print("\n--- Final Verified Database State ---")
+ECommerceOrder.view_active_orders()
+
+# Closing the database pipeline safely
+connection.close()
