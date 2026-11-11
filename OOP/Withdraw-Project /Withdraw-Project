@@ -1,4 +1,4 @@
-class Bank:
+class Back:
 
     def __init__(self, name, balance):
         self.name = name
@@ -13,7 +13,7 @@ class Bank:
             print("Insufficient balance")
 
 
-customer = Bank("Sravanthi", 5000)
+customer = Back("Sravanthi", 5000)
 
 amount = int(input("Enter withdraw amount: "))
 
