@@ -97,3 +97,9 @@ GitHub: https://github.com/Sravanthi153831
 ## 📌 Project Status
 
 Completed - Basic Django CRUD Application
+## 📌 Project Status
+
+Completed - Basic Django CRUD Application
+
+---
+⭐ Thank you for visiting my project!
