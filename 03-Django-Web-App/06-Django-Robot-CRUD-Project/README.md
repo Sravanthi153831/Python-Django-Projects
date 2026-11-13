@@ -26,7 +26,7 @@ through a simple web interface.
 - Database Management
 
 ## 📂 Project Structure
-
+'''text
 Robot/
 │
 ├── migrations/
