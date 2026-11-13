@@ -3,9 +3,10 @@
 ## 📌 Project Overview
 
 Robot Management System is a Django-based web application
-that allows users to manage robot details using CRUD operations.
+developed to manage robot details using CRUD operations.
 
-Users can add, view, update, and delete robot information.
+Users can add, view, edit, update, and delete robot information
+through a simple web interface.
 
 ## 🚀 Technologies Used
 
@@ -16,19 +17,20 @@ Users can add, view, update, and delete robot information.
 
 ## ✨ Features
 
-1. Add New Robot
-2. View Robot List
-3. Edit Robot Details
-4. Update Robot Information
-5. Delete Robot
-6. Django Forms
-7. Database Management
+- Add New Robot
+- View Robot List
+- Edit Robot Details
+- Update Robot Information
+- Delete Robot
+- Django Forms Integration
+- Database Management
 
 ## 📂 Project Structure
 
 Robot/
 │
 ├── migrations/
+│
 ├── templates/
 │   ├── robot_list.html
 │   ├── edit_robot.html
@@ -41,13 +43,13 @@ Robot/
 ├── urls.py
 └── views.py
 
-## ⚙️ Installation
+## ⚙️ Installation and Setup
 
 ### Step 1: Clone Repository
 
 git clone https://github.com/Sravanthi153831/Python-Django-Projects.git
 
-### Step 2: Navigate to Project
+### Step 2: Navigate to Project Folder
 
 cd Python-Django-Projects/03-Django-Web-App/06-Django-Robot-CRUD-Project/Robot_project
 
@@ -87,19 +89,18 @@ http://127.0.0.1:8000/robots/
 - URL Routing
 - Template Rendering
 - Database Operations
+- Building Web Applications
 
 ## 👩‍💻 Author
 
-Sravanthi
+**Sravanthi**
 
 GitHub: https://github.com/Sravanthi153831
 
 ## 📌 Project Status
 
 Completed - Basic Django CRUD Application
-## 📌 Project Status
-
-Completed - Basic Django CRUD Application
 
 ---
+
 ⭐ Thank you for visiting my project!
