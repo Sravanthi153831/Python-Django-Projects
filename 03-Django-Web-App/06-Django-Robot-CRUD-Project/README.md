@@ -26,22 +26,20 @@ through a simple web interface.
 - Database Management
 
 ## 📂 Project Structure
-'''text
-Robot/
-│
-├── migrations/
-│
-├── templates/
-│   ├── robot_list.html
-│   ├── edit_robot.html
-│   └── delete_robot.html
-│
-├── admin.py
-├── apps.py
-├── forms.py
-├── models.py
-├── urls.py
-└── views.py
+
+| File / Folder | Description |
+|---|---|
+| migrations/ | Database migrations |
+| templates/ | HTML templates |
+| robot_list.html | Add and display robots |
+| edit_robot.html | Edit robot details |
+| delete_robot.html | Delete robot details |
+| admin.py | Django admin configuration |
+| apps.py | Application configuration |
+| forms.py | Robot form handling |
+| models.py | Robot database model |
+| urls.py | URL routing |
+| views.py | CRUD application logic |
 
 ## ⚙️ Installation and Setup
 
