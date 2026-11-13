@@ -1,0 +1,33 @@
+DOCTYPE html>
+<html>
+<head>
+    <title>Edit Robot</title>
+</head>
+
+<body>
+
+<h1>Edit Robot 🤖</h1>
+
+<h2>Update Robot Details</h2>
+
+<form method="POST" action="">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Update Robot
+    </button>
+
+</form>
+
+<br>
+
+<a href="{% url 'robot_list' %}">
+    Back to Robot List
+</a>
+
+</body>
+</html>
+
