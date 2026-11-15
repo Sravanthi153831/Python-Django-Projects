@@ -2,4 +2,6 @@ from django.apps import AppConfig
 
 
 class RobotConfig(AppConfig):
-    name = 'Robot'
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'Robot_project.Robot'
+
