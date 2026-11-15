@@ -1,54 +1,464 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Robot Management</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Robot Management System</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #1e293b;
+}
+
+/* HEADER */
+
+.header {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #dbeafe;
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.stat-card h2 {
+    color: #2563eb;
+    font-size: 28px;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.section h2 {
+    color: #1e40af;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* SAVE BUTTON */
+
+.save-btn {
+    width: 100%;
+    padding: 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+/* FORM ERRORS */
+
+.errors {
+    color: red;
+    margin: 15px 0;
+}
+
+/* SEARCH */
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+/* ROBOT GRID */
+
+.robot-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 18px;
+}
+
+/* ROBOT CARD */
+
+.robot-card {
+    background: #f8fafc;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+}
+
+.robot-card h3 {
+    color: #1e40af;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.robot-card p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* ACTION BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-btn, .delete-btn {
+    flex: 1;
+    text-align: center;
+    padding: 13px 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background: #16a34a;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+/* EMPTY MESSAGE */
+
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 480px) {
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 16px;
+    }
+
+    .robot-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Robot Management System 🤖</h1>
+<!-- HEADER -->
 
-<h2>Add New Robot</h2>
+<div class="header">
 
-<form method="POST" action="{% url 'robot_list' %}">
+    <h1>🤖 Robot Management System</h1>
+
+    <p>Smart Robot Management Dashboard</p>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- STATISTICS -->
+
+<div class="stats">
+
+    <div class="stat-card">
+
+        <h2>{{ robots|length }}</h2>
+
+        <p>Total Robots</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h2>⚙️</h2>
+
+        <p>Robot Management</p>
+
+    </div>
+
+</div>
+
+
+<!-- ADD ROBOT SECTION -->
+
+<div class="section">
+
+    <h2>➕ Add New Robot</h2>
+
+    <form method="POST" action="{% url 'robot_list' %}" id="robotForm">
 
     {% csrf_token %}
 
     {{ form.as_p }}
 
-    <button type="submit">Save Robot</button>
+    <button type="submit">
+        SAVE ROBOT
+    </button>
 
 </form>
 
-<hr>
+</div>
 
-<h2>Robot List</h2>
 
-{% for robot in robots %}
+<!-- REGISTERED ROBOTS -->
 
-    <h3>{{ robot.name }}</h3>
+<div class="section">
 
-    <p>Robot Type: {{ robot.robot_type }}</p>
+    <h2>📋 Registered Robots</h2>
 
-    <p>Description: {{ robot.description }}</p>
 
-    <a href="{% url 'edit_robot' robot.id %}">
-        Edit Robot
-    </a>
+    <!-- SEARCH -->
 
-    |
+    <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="Search robots..."
+        onkeyup="searchRobots()"
+    >
 
-    <a href="{% url 'delete_robot' robot.id %}">
-        Delete Robot
-    </a>
 
-    <hr>
+    <!-- ROBOT LIST -->
 
-{% empty %}
+    <div class="robot-grid">
 
-    <p>No Robots Available</p>
 
-{% endfor %}
+        {% for robot in robots %}
+
+
+            <div class="robot-card">
+
+
+                <h3>
+
+                    🤖 {{ robot.name }}
+
+                </h3>
+
+
+                <p>
+
+                    <strong>Robot Type:</strong><br>
+
+                    {{ robot.robot_type }}
+
+                </p>
+
+
+                <p>
+
+                    <strong>Description:</strong><br>
+
+                    {{ robot.description }}
+
+                </p>
+
+
+                <!-- EDIT AND DELETE -->
+
+                <div class="actions">
+
+
+                    <a
+                        class="edit-btn"
+                        href="{% url 'edit_robot' robot.id %}"
+                    >
+
+                        Edit
+
+                    </a>
+
+
+                    <a
+                        class="delete-btn"
+                        href="{% url 'delete_robot' robot.id %}"
+                    >
+
+                        Delete
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        {% empty %}
+
+
+            <div class="empty">
+
+                <h3>No Robots Available 🤖</h3>
+
+                <p>Add your first robot.</p>
+
+            </div>
+
+
+        {% endfor %}
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <p>Robot Management System</p>
+
+    <p>Developed with Python & Django</p>
+
+</div>
+
+
+<!-- SEARCH JAVASCRIPT -->
+
+<script>
+
+function searchRobots() {
+
+    let input = document.getElementById("searchInput");
+
+    let filter = input.value.toLowerCase();
+
+    let cards = document.getElementsByClassName("robot-card");
+
+    for (let i = 0; i < cards.length; i++) {
+
+        let text = cards[i].innerText.toLowerCase();
+
+        cards[i].style.display =
+            text.includes(filter) ? "" : "none";
+
+    }
+
+}
+
+</script>
+
 
 </body>
-</html>
+
+    </html>
+
