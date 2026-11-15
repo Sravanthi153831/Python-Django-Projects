@@ -15,12 +15,9 @@ if not SECRET_KEY:
         raise RuntimeError("SECRET_KEY environment variable is required.")
 
 ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.environ.get(
-        "ALLOWED_HOSTS",
-        "127.0.0.1,localhost"
-    ).split(",")
-    if host.strip()
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
