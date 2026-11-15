@@ -3,7 +3,9 @@ from . import views
 
 urlpatterns = [
 
-    path('robots/', views.robot_list, name='robot_list'),
+    path('', views.robot_list, name='robot_list'),
+
+    path('robots/', views.robot_list, name='robot_list_page'),
 
     path('edit/<int:id>/', views.edit_robot, name='edit_robot'),
 
