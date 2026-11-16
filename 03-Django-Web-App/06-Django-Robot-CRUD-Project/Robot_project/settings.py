@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Robot_project.urls'
+ROOT_URLCONF = True
 
 TEMPLATES = [
     {
