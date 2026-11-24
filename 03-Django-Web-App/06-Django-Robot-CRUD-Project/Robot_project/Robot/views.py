@@ -1,48 +1,102 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.views.decorators.http import require_GET
+
 from .models import Robot
 from .forms import RobotForm
 
 
-# ADD AND DISPLAY ROBOTS
+# HOME PAGE
+
 def robot_list(request):
-    if request.method == 'POST':
-        if not request.user.is_authenticated:
-            return redirect('/admin/login/?next=/')
+
+    if request.method == "POST":
+
         form = RobotForm(request.POST)
+
         if form.is_valid():
             form.save()
-            print("ROBOT ADDED SUCCESSFULLY")
-            return redirect('robot_list')
+            return redirect("robot_list")
+
     else:
         form = RobotForm()
 
-    robots = Robot.objects.all().order_by('-id')
-    return render(request, 'robot_list.html', {
-        'form': form,
-        'robots': robots
+    robots = Robot.objects.all().order_by("-id")
+
+    for robot in robots:
+        robot.status = robot.battery_status()
+
+    return render(request, "robot_list.html", {
+        "form": form,
+        "robots": robots
     })
 
 
-# EDIT AND UPDATE ROBOT
-@login_required(login_url='/admin/login/')
+# EDIT ROBOT
+
 def edit_robot(request, id):
+
     robot = get_object_or_404(Robot, id=id)
-    if request.method == 'POST':
+
+    if request.method == "POST":
+
         form = RobotForm(request.POST, instance=robot)
+
         if form.is_valid():
             form.save()
-            return redirect('robot_list')
+            return redirect("robot_list")
+
     else:
         form = RobotForm(instance=robot)
 
-    return render(request, 'edit_robot.html', {'form': form, 'robot': robot})
+    return render(request, "edit_robot.html", {
+        "form": form,
+        "robot": robot
+    })
 
 
 # DELETE ROBOT
-@login_required(login_url='/admin/login/')
+
 def delete_robot(request, id):
+
     robot = get_object_or_404(Robot, id=id)
-    robot.delete()
-    return redirect('robot_list')
+
+    if request.method == "POST":
+
+        robot.delete()
+        return redirect("robot_list")
+
+    return render(request, "delete_robot.html", {
+        "robot": robot
+    })
+
+
+# LIVE BATTERY API
+
+@require_GET
+def battery_live(request):
+
+    robots = Robot.objects.all()
+
+    data = []
+
+    for robot in robots:
+
+        data.append({
+
+            "id": robot.id,
+
+            "name": robot.name,
+
+            "battery_level": robot.battery_level,
+
+            "battery_status": robot.battery_status()
+
+        })
+
+    return JsonResponse({
+        "robots": data
+    })
+    
+ 
     
