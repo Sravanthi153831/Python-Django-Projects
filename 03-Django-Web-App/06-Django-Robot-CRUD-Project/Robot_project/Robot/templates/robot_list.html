@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Robot Management System</title>
@@ -23,33 +23,22 @@ body {
     color: #1e293b;
 }
 
-/* HEADER */
-
 .header {
-    background: linear-gradient(135deg, #172554, #2563eb);
+    background: linear-gradient(135deg,#172554,#2563eb);
     color: white;
     text-align: center;
     padding: 30px 15px;
 }
 
 .header h1 {
-    font-size: 27px;
     margin-bottom: 10px;
 }
 
-.header p {
-    color: #dbeafe;
-}
-
-/* CONTAINER */
-
 .container {
-    max-width: 950px;
+    max-width: 1000px;
     margin: 25px auto;
-    padding: 0 15px;
+    padding: 15px;
 }
-
-/* STATISTICS */
 
 .stats {
     display: grid;
@@ -61,37 +50,26 @@ body {
 .stat-card {
     background: white;
     padding: 22px;
-    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 3px 12px #00000010;
+    border-radius: 12px;
 }
 
 .stat-card h2 {
     color: #2563eb;
-    font-size: 28px;
+    font-size: 30px;
 }
-
-.stat-card p {
-    margin-top: 8px;
-    color: #64748b;
-}
-
-/* SECTIONS */
 
 .section {
     background: white;
     padding: 22px;
     border-radius: 15px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 12px #00000010;
 }
 
 .section h2 {
     color: #1e40af;
     margin-bottom: 20px;
 }
-
-/* FORM */
 
 form p {
     margin-bottom: 15px;
@@ -105,104 +83,86 @@ form label {
 
 input, textarea, select {
     width: 100%;
-    padding: 14px;
-    margin-top: 7px;
+    padding: 13px;
     border: 1px solid #cbd5e1;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-}
-
-textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-/* SAVE BUTTON */
-
 .save-btn {
     width: 100%;
-    padding: 16px;
+    padding: 15px;
     background: #2563eb;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 17px;
     font-weight: bold;
-    cursor: pointer;
 }
-
-.save-btn:hover {
-    background: #1d4ed8;
-}
-
-/* FORM ERRORS */
-
-.errors {
-    color: red;
-    margin: 15px 0;
-}
-
-/* SEARCH */
 
 .search-box {
     margin-bottom: 20px;
 }
 
-/* ROBOT GRID */
-
 .robot-grid {
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(220px, 1fr)
+        minmax(240px,1fr)
     );
-
     gap: 18px;
 }
-
-/* ROBOT CARD */
 
 .robot-card {
     background: #f8fafc;
     padding: 20px;
     border: 1px solid #e2e8f0;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .robot-card h3 {
     color: #1e40af;
-    margin-bottom: 20px;
-    font-size: 21px;
+    margin-bottom: 15px;
 }
 
 .robot-card p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.5;
     word-wrap: break-word;
 }
 
-/* ACTION BUTTONS */
+.battery-bar {
+    width: 100%;
+    height: 16px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.battery-fill {
+    height: 100%;
+    background: #16a34a;
+    transition: width 0.5s;
+}
+
+.battery-status {
+    font-weight: bold;
+}
 
 .actions {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
-.edit-btn, .delete-btn {
+.actions a {
     flex: 1;
+    padding: 12px;
     text-align: center;
-    padding: 13px 5px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: bold;
+    border-radius: 7px;
 }
 
 .edit-btn {
@@ -213,37 +173,25 @@ textarea {
     background: #dc2626;
 }
 
-/* EMPTY MESSAGE */
-
 .empty {
     text-align: center;
-    padding: 30px;
-    color: #64748b;
+    padding: 25px;
 }
-
-/* FOOTER */
 
 .footer {
     text-align: center;
     padding: 25px;
     color: #64748b;
-    line-height: 1.8;
 }
 
-/* MOBILE RESPONSIVE */
+@media(max-width:480px) {
 
-@media(max-width: 480px) {
-
-    .header h1 {
-        font-size: 22px;
+    .robot-grid {
+        grid-template-columns: 1fr;
     }
 
     .section {
         padding: 16px;
-    }
-
-    .robot-grid {
-        grid-template-columns: 1fr;
     }
 
 }
@@ -258,9 +206,11 @@ textarea {
 
 <div class="header">
 
-    <h1>🤖 Robot Management System</h1>
+<h1>🤖 Robot Management System</h1>
 
-    <p>Smart Robot Management Dashboard</p>
+<p>Smart Robot Management Dashboard</p>
+
+<p>🔋 Automatic Battery Monitoring</p>
 
 </div>
 
@@ -272,151 +222,139 @@ textarea {
 
 <div class="stats">
 
-    <div class="stat-card">
+<div class="stat-card">
 
-        <h2>{{ robots|length }}</h2>
+<h2 id="totalRobots">{{ robots|length }}</h2>
 
-        <p>Total Robots</p>
+<p>Total Robots</p>
 
-    </div>
+</div>
 
+<div class="stat-card">
 
-    <div class="stat-card">
+<h2>⚡ LIVE</h2>
 
-        <h2>⚙️</h2>
+<p>Battery Monitoring</p>
 
-        <p>Robot Management</p>
-
-    </div>
+</div>
 
 </div>
 
 
-<!-- ADD ROBOT SECTION -->
+<!-- ADD ROBOT -->
 
 <div class="section">
 
-    <h2>➕ Add New Robot</h2>
+<h2>➕ Add New Robot</h2>
 
-    <form method="POST" action="{% url 'robot_list' %}" id="robotForm">
+<form method="POST" action="{% url 'robot_list' %}">
 
-    {% csrf_token %}
+{% csrf_token %}
 
-    {{ form.as_p }}
+{{ form.as_p }}
 
-    <button type="submit">
-        SAVE ROBOT
-    </button>
+<button class="save-btn" type="submit">
+
+SAVE ROBOT
+
+</button>
 
 </form>
 
 </div>
 
 
-<!-- REGISTERED ROBOTS -->
+<!-- ROBOT LIST -->
 
 <div class="section">
 
-    <h2>📋 Registered Robots</h2>
+<h2>📋 Registered Robots</h2>
+
+<input
+type="text"
+id="searchInput"
+class="search-box"
+placeholder="Search robots..."
+onkeyup="searchRobots()"
+>
+
+<div class="robot-grid" id="robotGrid">
 
 
-    <!-- SEARCH -->
+{% for robot in robots %}
 
-    <input
-        type="text"
-        id="searchInput"
-        class="search-box"
-        placeholder="Search robots..."
-        onkeyup="searchRobots()"
-    >
+<div class="robot-card" data-id="{{ robot.id }}">
 
+<h3>🤖 {{ robot.name }}</h3>
 
-    <!-- ROBOT LIST -->
+<p>
+<strong>Robot Type:</strong><br>
+{{ robot.robot_type }}
+</p>
 
-    <div class="robot-grid">
+<p>
+<strong>Description:</strong><br>
+{{ robot.description }}
+</p>
 
+<p>
+🔋 Battery Level:
 
-        {% for robot in robots %}
+<strong class="battery-value">
+{{ robot.battery_level }}%
+</strong>
 
+</p>
 
-            <div class="robot-card">
+<div class="battery-bar">
 
-
-                <h3>
-
-                    🤖 {{ robot.name }}
-
-                </h3>
-
-
-                <p>
-
-                    <strong>Robot Type:</strong><br>
-
-                    {{ robot.robot_type }}
-
-                </p>
-
-
-                <p>
-
-                    <strong>Description:</strong><br>
-
-                    {{ robot.description }}
-
-                </p>
-
-
-                <!-- EDIT AND DELETE -->
-
-                <div class="actions">
-
-
-                    <a
-                        class="edit-btn"
-                        href="{% url 'edit_robot' robot.id %}"
-                    >
-
-                        Edit
-
-                    </a>
-
-
-                    <a
-                        class="delete-btn"
-                        href="{% url 'delete_robot' robot.id %}"
-                    >
-
-                        Delete
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        {% empty %}
-
-
-            <div class="empty">
-
-                <h3>No Robots Available 🤖</h3>
-
-                <p>Add your first robot.</p>
-
-            </div>
-
-
-        {% endfor %}
-
-
-    </div>
+<div
+class="battery-fill"
+style="width:{{ robot.battery_level }}%">
+</div>
 
 </div>
 
+<p class="battery-status">
+
+⚡ {{ robot.battery_status }}
+
+</p>
+
+<div class="actions">
+
+<a
+class="edit-btn"
+href="{% url 'edit_robot' robot.id %}">
+Edit
+</a>
+
+<a
+class="delete-btn"
+href="{% url 'delete_robot' robot.id %}">
+Delete
+</a>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="empty">
+
+<h3>No Robots Available 🤖</h3>
+
+<p>Add your first robot.</p>
+
+</div>
+
+{% endfor %}
+
+
+</div>
+
+</div>
 
 </div>
 
@@ -425,40 +363,122 @@ textarea {
 
 <div class="footer">
 
-    <p>Robot Management System</p>
+<p>Robot Management System</p>
 
-    <p>Developed with Python & Django</p>
+<p>Developed with Python & Django</p>
 
 </div>
 
 
-<!-- SEARCH JAVASCRIPT -->
+<!-- JAVASCRIPT -->
 
 <script>
 
+
+// SEARCH ROBOTS
+
 function searchRobots() {
 
-    let input = document.getElementById("searchInput");
+    let input = document
+        .getElementById("searchInput")
+        .value.toLowerCase();
 
-    let filter = input.value.toLowerCase();
+    let cards = document
+        .getElementsByClassName("robot-card");
 
-    let cards = document.getElementsByClassName("robot-card");
+    for (let card of cards) {
 
-    for (let i = 0; i < cards.length; i++) {
+        let text = card.innerText.toLowerCase();
 
-        let text = cards[i].innerText.toLowerCase();
-
-        cards[i].style.display =
-            text.includes(filter) ? "" : "none";
+        card.style.display =
+            text.includes(input) ? "" : "none";
 
     }
 
 }
 
-</script>
 
+// LIVE BATTERY UPDATE
+
+function updateBattery() {
+
+    fetch("{% url 'battery_live' %}")
+
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error("API error");
+        }
+
+        return response.json();
+
+    })
+
+    .then(data => {
+
+        document.getElementById("totalRobots")
+            .innerText = data.robots.length;
+
+        data.robots.forEach(robot => {
+
+            let card = document.querySelector(
+                '.robot-card[data-id="' + robot.id + '"]'
+            );
+
+            if (!card) return;
+
+            let battery = Math.max(
+                0,
+                Math.min(100, robot.battery_level)
+            );
+
+            card.querySelector(".battery-value")
+                .innerText = battery + "%";
+
+            let fill = card.querySelector(".battery-fill");
+
+            fill.style.width = battery + "%";
+
+            if (battery <= 20) {
+
+                fill.style.background = "#dc2626";
+
+            } else if (battery <= 50) {
+
+                fill.style.background = "#eab308";
+
+            } else {
+
+                fill.style.background = "#16a34a";
+
+            }
+
+            card.querySelector(".battery-status")
+                .innerText = "⚡ " + robot.battery_status;
+
+        });
+
+    })
+
+    .catch(error => {
+
+        console.log("Battery Error:", error);
+
+    });
+
+}
+
+
+// UPDATE EVERY 2 SECONDS
+
+updateBattery();
+
+setInterval(updateBattery, 2000);
+
+
+</script>
 
 </body>
 
-    </html>
+</html>
 
